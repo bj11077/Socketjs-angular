@@ -1,0 +1,21 @@
+
+
+        <label for="connect">Make Connection:</label>
+        <button id="connect" class="btn btn-default" type="button" [disabled]="!disabled" (click)="connect()">Connect</button>
+        <button id="disconnect" class="btn btn-default" type="submit" [disabled]="disabled" (click)="disconnect()">Disconnect</button>
+        <button id="sendmessage" class="btn btn-default" type="button" [disabled]="disabled" (click)="sendMessage()">send</button>
+
+
+    <table id="receive" class="table table-striped" style="margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>MessageLog</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let receive of receiveList">
+        <tr>
+          <td>attendanceCount : {{receive.attendanceCount}}, memberSince : {{receive.memberSince}},  userName : {{receive.userName}}</td>
+        </tr>
+      </tbody>
+    </table>
+
